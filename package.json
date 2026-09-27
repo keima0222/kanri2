@@ -1,0 +1,1 @@
+{"name":"hoan-note","version":"1.0.0","private":true,"type":"module","description":"Offline-capable field service records with Supabase synchronization","scripts":{"test":"node tests/run.mjs","test:database":"node tests/database.mjs"},"devDependencies":{"@electric-sql/pglite":"0.5.8","fake-indexeddb":"6.2.5","jszip":"3.10.1","playwright":"1.62.1"}}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="事業場の情報、受電設備、タスクをひとつに。オフラインでも使える保安業務の記録アプリ。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self' https://*.supabase.co; frame-src blob: 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>事業場ノート</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23102b46'/%3E%3Cpath d='M19 13h27v38H19z' fill='none' stroke='white' stroke-width='4'/%3E%3Cpath d='m34 20-9 14h8l-3 12 12-17h-9z' fill='%235ee0b3'/%3E%3C/svg%3E">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./vendor/jszip.min.js" defer></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <aside class="sidebar">
+    <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">▤</span><span>事業場ノート<small>電気保安業務</small></span></a>
+    <nav aria-label="メインメニュー" id="desktop-nav"></nav>
+    <div class="sidebar-footer"><span class="version">VERSION 1.0</span><p>現場の記録を、<br>次の対応につなげる。</p></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><a class="mobile-brand" href="#/">▤ 事業場ノート</a><span class="desktop-caption">事業場・設備・対応記録</span><button id="sync-state" class="sync-state" aria-live="polite" type="button">読み込み中</button></header>
+    <div id="notice" aria-live="polite"></div>
+    <main id="main" tabindex="-1"><div class="empty">記録を読み込んでいます…</div></main>
+  </div>
+  <nav class="bottom-nav" id="mobile-nav" aria-label="メインメニュー"></nav>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>このアプリを使うには、ブラウザのJavaScriptを有効にしてください。</noscript>
+</body>
+</html>
